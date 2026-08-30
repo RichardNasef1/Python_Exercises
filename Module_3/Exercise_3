@@ -1,7 +1,39 @@
+# 3. Variables and interactive programs
 #### 1.
+
 user = input('What is your name? ')
 print("Hello," + user + "!")
+
 #### 2.
+
+radius = float(input("Enter the radius of the circle:"))
 import math
-radius = float(input("Enter the radius of the circle: "))
-area = (f"{"Pi"}
+area = float(math.pi * (radius ** 2))
+print(f"The area of a circle with that radius is {area:2.2f}") 
+
+### 3.
+
+length = float(input("Enter the length of the rectangle "))
+width = float(input("Enter the width of the rectangle "))
+print(f"The area of the rectangle is {length * width}")
+print(f"The perimeter of the rectangle is {2 * length + 2 * width}")
+
+### 4. 
+
+first_number = int(input("Enter your first WHOLE number here:" ))
+second_number = int(input("Enter your second WHOLE number here:" ))
+third_number = int(input("Enter your third WHOLE number here:" ))
+print(f"The sum of all three numbers are {first_number + second_number + third_number}")
+print(f"The product of all three numbers are {first_number * second_number * third_number}")
+print(f"The average of all three numbers are {(first_number + second_number + third_number)/3:.0f}")
+
+### 5. 
+
+talents = float(input("Enter talents:\n"))
+pounds = float(input("Enter pounds:\n"))
+lots = float(input("Enter lots:\n"))
+grams = float(f"{(talents * 20 * 32 * 13.3)+(lots * 32 * 13.3)*(pounds * 13.3)}")
+print(f"The weight in modern units:\n{grams / 1000:.2f} kilograms and {grams:.2f} grams")
+
+
+### Completed

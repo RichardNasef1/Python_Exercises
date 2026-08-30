@@ -2,7 +2,7 @@
 
 ###1.
 
-""" min_length = 42
+min_length = 42
 length = int(input("Please enter the length of the zander in cm here: "))
 if length <= min_length:
     print(f"This zander is {min_length - length} cm too small. Please return it to the waters")
@@ -41,7 +41,7 @@ elif gender == "female" and hemo >= 155:
     print("Your hemoglobin levels are high!")
 else:
     print("Please double check all answers and try again. ")
-"""
+
 ###4.
 year = int(input("Please enter a year, any year! "))
 if year % 400 ==0 or year % 4 == 0 and year % 100 > 0:

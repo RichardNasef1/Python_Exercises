@@ -11,7 +11,7 @@ else:
  
 ###2.
 
-cabin = input("Welcome aboard! Please enter your cabin class: ")
+cabin = input("Welcome aboard! Please enter your cabin class: ").upper()
 if cabin == "LUX": 
     print("LUX: upper-deck cabin with a balcony.")
 elif cabin == "A":
@@ -25,19 +25,19 @@ else:
 
 ###3. 
 
-gender = input("What is your biological gender? ")
+gender = input("What is your biological gender? (F/M)").upper()
 hemo = float(input("What is your hemoglobin value (g/l)? "))
-if gender == "male" and hemo <= 137:
+if gender == "M" and hemo <= 137:
     print("Your hemoglobin levels are low!")
-elif gender == "male" and  137 <= hemo <= 167:
+elif gender == "M" and  137 <= hemo <= 167:
     print("Your hemoglobin levels are normal.")
-elif gender == "male" and hemo > 167:
+elif gender == "M" and hemo > 167:
     print("Your hemoglobin levels are high!")
-elif gender == "female" and hemo <= 117:
+elif gender == "F" and hemo <= 117:
     print("Your hemoglobin levels are low!")
-elif gender == "female" and  117 <= hemo < 155:
+elif gender == "F" and  117 <= hemo < 155:
     print("Your hemoglobin levels are normal.")
-elif gender == "female" and hemo >= 155:
+elif gender == "F" and hemo >= 155:
     print("Your hemoglobin levels are high!")
 else:
     print("Please double check all answers and try again. ")

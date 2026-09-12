@@ -1,14 +1,50 @@
 user = input("What is your name? ")
 age = int(input("How old are you? "))
-if age < 12 :
-    print(f"Hello {user}! You are a minor.")   
+
+if age < 12:
+    print(f"Hello {user}! You are a minor.")
+
 else:
-    print(f"Welcome {user} You are {age} years old!")
-while True:
-    print("You are in your apartment, looking for your black cat "
-    "(who likes to hide and run away)")
-    print("1. Go to the Kitchen")
-    print("2. Go to the Bathroom")
-    print("3. Go to the Bedroom")
-    print("4. Go to the Living Room")
-    input("Choose where to look ")
+    print(f"Welcome {user}! You are {age} years old!")
+
+    inventory = []
+
+    def add_item():
+        inventory.append("cat food")
+        print("You found some cat food and added it to your inventory.")
+
+    def show_inventory():
+        print("Your inventory:")
+        for item in inventory:
+            print(item)
+
+    def search_room():
+        print("You search the apartment for your black cat...")
+        print("You don't find the cat yet.")
+
+    while True:
+
+        print()
+        print("You are in your apartment, looking for your black cat.")
+        print("1. Search the apartment")
+        print("2. Pick up an item")
+        print("3. Show your inventory")
+        print("4. Quit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            search_room()
+
+        elif choice == "2":
+            add_item()
+
+        elif choice == "3":
+            show_inventory()
+
+        elif choice == "4":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid choice.")

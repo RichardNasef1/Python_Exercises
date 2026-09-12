@@ -1,4 +1,4 @@
- # Programming Project - Name Unkown
+ # Programming Project - "Dude, Where's my cat"
 **Richard Nasef**
 
 ### Assignment 1

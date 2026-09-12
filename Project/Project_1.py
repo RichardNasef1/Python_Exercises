@@ -7,7 +7,7 @@ if age < 12:
 else:
     print(f"Welcome {user}! You are {age} years old!")
 
-    inventory = []
+    inventory =  []
 
     def add_item():
         inventory.append("cat food")
@@ -24,27 +24,20 @@ else:
 
     while True:
 
-        print()
         print("You are in your apartment, looking for your black cat.")
         print("1. Search the apartment")
-        print("2. Pick up an item")
-        print("3. Show your inventory")
-        print("4. Quit")
+        print("2. Show your inventory")
+        print("3. Quit")
 
         choice = input("Choose an option: ")
 
         if choice == "1":
             search_room()
-
         elif choice == "2":
-            add_item()
-
-        elif choice == "3":
             show_inventory()
-
-        elif choice == "4":
+        elif choice == "3":
             print("Goodbye!")
             break
-
         else:
             print("Invalid choice.")
+        

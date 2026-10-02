@@ -55,7 +55,7 @@ import random
 cars = []
 race_finished = False
 
-for i in range(1, 11):
+for i in range(10):
     maximum_speed = random.randint(100, 200)
     registration_number = f"ABC-{i}"
 

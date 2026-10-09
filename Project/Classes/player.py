@@ -7,7 +7,6 @@ class Player:
         self.inventory = []
         self.location = location
 
-<<<<<<< HEAD
 
     def take_item(self, room, item):
         if item in room.items:
@@ -25,12 +24,4 @@ class Player:
         
             for item in self.inventory:
                 print(item.name)
-=======
-    def add_item(self,item):
-        self.inventory.append(item)
-        print(f"You added {item} to your inventory.")
-    
-    def show_inventory(self,inventory):
-        print("Your inventory: {inventory} ")
->>>>>>> c05d62cbfdcd4d038fccf2422e271795634e5c24
           

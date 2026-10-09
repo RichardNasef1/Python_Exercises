@@ -1,7 +1,6 @@
 from Classes.items import *
 from Classes.player import *
 from Classes.rooms import *
-<<<<<<< HEAD
 from Classes.searchable import *
 from Classes.intro import game_intro
 import time
@@ -31,7 +30,7 @@ tv = Searchable("TV")
 coffee_table = Searchable("Coffee table")
 searchables = [key_hook,fridge,cabinet,counter,sink,shower,bathroom_cabinet,bed,closet,laundry_basket,couch,tv,coffee_table]
 
-cat_food = Item("cat food","Your cat's favorite food, they usually runs straight to you when they hears you open the package")
+cat_food = Item("cat food","Your cat's favorite food,they usually runs straight to you when they hears you open the package")
 empty_food_bowl = Item("empty cat food bowl","Your cat's empty food bowl")
 empty_water_bowl = Item("empty water bowl","Your cat has been thirsty")
 smelly_sock = Item("smelly sock","Just a smelly sock")
@@ -279,35 +278,36 @@ while True:
                 if search_choice == "1":
                     print("You open the fridge.")
                         
-                    if cat_location == kitchen and cat_settled == False and cat_food in player.inventory and empty_food_bowl in player.inventory:
+                    if cat_location == kitchen and cat_settled == False:
 
+                        
+                        if cat_food in player.inventory and empty_food_bowl in player.inventory:
 
+                            print()
+                            time.sleep(time_delay)
+                            print(Fore.YELLOW + f"You hear {cat} meowing somewhere in the kitchen." + Style.RESET_ALL)
+                            time.sleep(time_delay)
+                            print("You put some food into the empty food bowl.")
+                            time.sleep(time_delay)
+                            print(Fore.GREEN + f"{cat} comes running over to eat!" + Style.RESET_ALL)
+                            time.sleep(time_delay)
 
-                        print()
-                        time.sleep(time_delay)
-                        print(Fore.YELLOW + f"You hear {cat} meowing somewhere in the kitchen." + Style.RESET_ALL)
-                        time.sleep(time_delay)
-                        print("You put some food into the empty food bowl.")
-                        time.sleep(time_delay)
-                        print(Fore.GREEN + f"{cat} comes running over to eat!" + Style.RESET_ALL)
-                        time.sleep(time_delay)
+                            player.inventory.remove(cat_food)
+                            player.inventory.remove(empty_food_bowl)
 
-                        player.inventory.remove(cat_food)
-                        player.inventory.remove(empty_food_bowl)
-
-                        print(Fore.GREEN + f"{cat} is happily eating their food." + Style.RESET_ALL)
-                        time.sleep(time_delay)
-                        print(Fore.GREEN + "Now it's time to relax on the couch with your favorite bag of chips." + Style.RESET_ALL)
-                        cat_settled = True
+                            print(Fore.GREEN + f"{cat} is happily eating their food." + Style.RESET_ALL)
+                            time.sleep(time_delay)
+                            print(Fore.GREEN + "Now it's time to relax on the couch with your favorite bag of chips." + Style.RESET_ALL)
+                            cat_settled = True
                 
 
-                    else:
-                        print()
-                        time.sleep(time_delay)
-                        print(Fore.YELLOW + f"You hear {cat} somewhere in the kitchen." + Style.RESET_ALL)
-                        time.sleep(time_delay)
-                        print(Fore.YELLOW + "Maybe you can lure them out with their favorite food." + Style.RESET_ALL)
-                        time.sleep(time_delay)
+                        else:
+                            print()
+                            time.sleep(time_delay)
+                            print(Fore.YELLOW + f"You hear {cat} somewhere in the kitchen." + Style.RESET_ALL)
+                            time.sleep(time_delay)
+                            print(Fore.YELLOW + "Maybe you can lure them out with their favorite food." + Style.RESET_ALL)
+                            time.sleep(time_delay)
 
                     item_menu(player, fridge)
 
@@ -494,49 +494,3 @@ while True:
         
     if game_won == True:
         break
-
-
-
-=======
-import time
-
-
-print(cat_food)
-a = .2
-user = input("What is your name? ")
-age = int(input("How old are you? "))
-
-
-if age < 12:
-    print(f"Hello {user}! You are a minor. You need to be at least 12 years old to play this game.")
-
-else:
-    print(f"Welcome {user} to Dude Where's my cat!")
-    print("You just entered your apartment after a long day of classes at Metropolia University")
-    print("All you want to do is lay on the couch with a bag of chips, the remote and your two year old cat who just learned how to hide!")
-
-    inventory =  ["keys"]
-
-    def search_room():
-        print("You search the apartment for your black cat...")
-        print("You don't find the cat yet.")
-
-    while True:
-
-        print("You are in your apartment, looking for your black cat.")
-        print("1. Search the apartment")
-        print("2. Show your inventory")
-        print("3. Quit")
-
-        choice = input("Choose an option: ")
-
-        if choice == "1":
-            search_room()
-        elif choice == "2":
-            show_inventory()
-        elif choice == "3":
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice.")
->>>>>>> c05d62cbfdcd4d038fccf2422e271795634e5c24

@@ -1,5 +1,6 @@
  # Programming Project - "Dude, Where's my cat"
 
+<<<<<<< HEAD
 ### Description
 
 Dude Where's My Cat? is a text-based adventure game written in Python.
@@ -65,3 +66,14 @@ Name:Richard Nasef
  Update save system to have the ablity to save more than one file at a time
  seperate save functions onto its own file
  
+=======
+### Assignment 1
+completed - (brainstorming what game I would like to make)
+### Assignment 2 
+completed - modified the main menu , no person under 12 can play 
+### Assignment 3
+completed - created functions for adding to inv , search room and show inv (most likely will alter these) -- Decided it will be a search for your lazy sneaky cat game 
+### Assignment 4
+completed - created classes for rooms , players and objects and seperated classes into a different folder (note to self: current classes need more methods)
+### Assignment 5
+>>>>>>> c05d62cbfdcd4d038fccf2422e271795634e5c24
